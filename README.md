@@ -196,13 +196,6 @@ Use this space to list resources you find helpful and would like to give credit 
 	<tbody>
 		<tr>
             <td align="center">
-                <a href="https://github.com/marcelkoehler">
-                    <img src="https://avatars.githubusercontent.com/u/114416058?v=4" width="100;" alt="marcelkoehler"/>
-                    <br />
-                    <sub><b>marcelkoehler</b></sub>
-                </a>
-            </td>
-            <td align="center">
                 <a href="https://github.com/aromko">
                     <img src="https://avatars.githubusercontent.com/u/77496890?v=4" width="100;" alt="aromko"/>
                     <br />
