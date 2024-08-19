@@ -5,7 +5,6 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-
 [![MIT License][license-shield]][license-url]
 
 <!-- PROJECT LOGO -->
@@ -77,7 +76,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 [aromko](info.aromko.com) - aromko@gmail.com
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

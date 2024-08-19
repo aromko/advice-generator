@@ -1,20 +1,28 @@
-import { useState } from "react";
+import useScreenSize from "@/utils/useScreenSize.tsx";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const screenSize = useScreenSize();
 
   return (
-    <>
-      <h1>Vite + React</h1>
-      <div>
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+    <div className="flex min-h-screen flex-col items-center justify-center bg-neutral-dark-blue">
+      <div className="flex flex-col items-center rounded-2xl bg-neutral-dark-grayish-blue p-8 sm:max-w-96 xl:max-w-[450px]">
+        <p className="pb-3 text-sm uppercase tracking-[5px] text-primary-neon-green">
+          Advice #117
         </p>
+        <p className="text-center text-xl text-primary-light-cyan">
+          "It is easy to sit up and take notice, what's difficult is getting up
+          and taking action."
+        </p>
+        {screenSize.width <= 375 ? (
+          <img className="m-8" src="pattern-divider-mobile.svg" />
+        ) : (
+          <img className="m-8" src="pattern-divider-desktop.svg" />
+        )}
       </div>
-    </>
+      <button className="-mt-8 rounded-full border-[20px] border-primary-neon-green hover:ring-4 hover:ring-primary-neon-green/40">
+        <img className="bg-primary-neon-green" src="./icon-dice.svg" />
+      </button>
+    </div>
   );
 }
 
