@@ -15,6 +15,8 @@
     Advices for every day</p>
 </div>
 
+![Bildschirmfoto 2024-08-20 um 14 11 09](https://github.com/user-attachments/assets/7adc6657-4780-4046-95a1-149f9394566f)
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
