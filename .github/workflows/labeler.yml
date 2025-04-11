@@ -6,6 +6,10 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+  pull-requests: write  # Explicitly grant write permissions to pull requests.
+
 jobs:
   label:
     runs-on: ubuntu-latest
