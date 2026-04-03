@@ -1,6 +1,6 @@
 {
   "extends": [
-    "config:base",
+    "config:recommended",
     ":semanticCommitTypeAll(chore)",
     ":rebaseStalePrs"
   ],
@@ -11,16 +11,16 @@
       "minimumReleaseAge": "3 days"
     },
     {
-      "matchPackagePatterns": ["eslint"],
-      "groupName": "eslint"
+      "groupName": "eslint",
+      "matchPackageNames": ["/eslint/"]
     },
     {
-      "matchPackagePatterns": ["jest", "testing-library", "swc"],
-      "groupName": "testing"
+      "groupName": "testing",
+      "matchPackageNames": ["/jest/", "/testing-library/", "/swc/"]
     },
     {
-      "matchPackagePatterns": ["postcss", "tailwind"],
-      "groupName": "tailwind"
+      "groupName": "tailwind",
+      "matchPackageNames": ["/postcss/", "/tailwind/"]
     },
     {
       "groupName": "react monorepo",
@@ -29,18 +29,14 @@
     {
       "groupName": "all non-major dependencies",
       "groupSlug": "all-minor-patch",
-      "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["minor", "patch"]
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchPackageNames": ["*"]
     },
     {
-      "packageRules": [
-        {
-          "description": "Automerge non-major updates",
-          "matchUpdateTypes": ["minor", "patch"],
-          "matchCurrentVersion": "!/^0/",
-          "automerge": true
-        }
-      ]
+      "description": "Automerge non-major updates",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true
     }
   ],
   "timezone": "Europe/Berlin"
