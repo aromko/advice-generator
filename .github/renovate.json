@@ -5,10 +5,11 @@
     ":rebaseStalePrs"
   ],
   "schedule": ["before 3am on the first day of the month"],
+  "rangeStrategy": "pin",
   "packageRules": [
     {
       "matchDatasources": ["npm"],
-      "minimumReleaseAge": "3 days"
+      "minimumReleaseAge": "7 days"
     },
     {
       "groupName": "eslint",
@@ -36,7 +37,21 @@
       "description": "Automerge non-major updates",
       "matchUpdateTypes": ["minor", "patch"],
       "matchCurrentVersion": "!/^0/",
-      "automerge": true
+      "automerge": true,
+      "automergeType": "pr",
+      "minimumReleaseAge": "7 days"
+    },
+    {
+      "description": "Require manual review for framework updates (all update types)",
+      "matchPackageNames": ["react", "react-dom"],
+      "automerge": false,
+      "prPriority": 10
+    },
+    {
+      "description": "Extra labels for major framework updates",
+      "matchPackageNames": ["react", "react-dom"],
+      "matchUpdateTypes": ["major"],
+      "labels": ["dependencies", "breaking"]
     }
   ],
   "timezone": "Europe/Berlin"
